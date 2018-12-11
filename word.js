@@ -1,18 +1,28 @@
 var Letter = require('./letter');
 
 var Word = function(word){
-    this.wordArr = word;
+    this.value = word;
+    this.letterArr = [];
+    for(var i=0; i<this.value.length; i++){
+        var letter = new Letter(this.value[i]);
+        this.letterArr.push(letter)
+    }
+
     this.show = function(){
-        var showPlace = "";
-        for(var i=0; i<this.wordArr.length; i++){
-            var letter = new Letter(this.wordArr[i]);
-            showPlace += `${letter.show(this.wordArr[i])} `;
+        var showPlace = ""
+        for(var i=0; i<this.letterArr.length; i++){
+            showPlace += `${this.letterArr[i].show()} `;
         }
         return showPlace
     }
-    this.check = function(){}
+    this.check = function(guess){
+        for(var i=0; i<this.letterArr.length; i++){
+           this.letterArr[i].check(guess);
+        }
+    }
 }
 
-var saba = new Word("")
-
-console.log(saba.show())
+var saba = new Word("minamo");
+console.log(saba.show());
+saba.check("i");
+console.log(saba.show());

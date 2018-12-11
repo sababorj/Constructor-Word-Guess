@@ -19,3 +19,4 @@ module.exports = Letter;
 // var a = new Letter("a");
 // a.check("a");
 // console.log(a.isGuessed)
+// console.log(a.show())
