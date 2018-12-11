@@ -13,6 +13,6 @@ var Word = function(word){
     this.check = function(){}
 }
 
-var saba = new Word("sina")
+var saba = new Word("")
 
 console.log(saba.show())
