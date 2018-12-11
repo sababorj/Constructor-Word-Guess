@@ -27,8 +27,7 @@ function contin() {
 function game() {
     // choose the word and inform the user how game works
     choseAword();
-    console.log('Welcome to the guess game!');
-    console.log('Hint: you have to guess a movie title which can be more than one word (space is the seprator):');
+    console.log('\nHint: you have to guess a movie title which can be more than one word (space is the seprator):\n');
 
     // prompt the user to guess a word
     function ask() {
@@ -46,11 +45,11 @@ function game() {
                 if (guessLeft > 0) {
                     ask()
                 } else {
-                    console.log(`You lost :( the answer was -> "${guess.value}"`)
+                    console.log(`You lost :( the answer was -> "${guess.value}"\n`)
                     contin()
                 }
             } else {
-                console.log("you won!")
+                console.log("you won!\n")
                 contin()
             }
         })
