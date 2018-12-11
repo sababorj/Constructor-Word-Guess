@@ -20,6 +20,14 @@ var Word = function(word){
            this.letterArr[i].check(guess);
         }
     }
+
+    this.mistrywords = function(){
+        var total = 0
+        for(var i=0; i<this.letterArr.length; i++){
+            (this.letterArr[i].isGuessed) ? false : total++ ;
+        }
+        return total;
+    } 
 }
 
 module.exports = Word;
