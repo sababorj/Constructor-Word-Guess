@@ -33,7 +33,10 @@ function game() {
     function ask() {
         inquirer.prompt([{
             name: "word",
-            message: "? Guess a letter!"
+            message: "? Guess a letter!",
+            // validate: function(guess) {
+            //     // return true or false
+            // }
         }]).then((res) => {
             guess.check(res.word)
             console.log(`${guess.show()}\n`);

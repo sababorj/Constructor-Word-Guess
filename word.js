@@ -16,8 +16,19 @@ var Word = function(word){
         return showPlace
     }
     this.check = function(guess){
+        var successGuess = false;
+        // check the guess on all the letters of the word
         for(var i=0; i<this.letterArr.length; i++){
-           this.letterArr[i].check(guess);
+        var tempSuccess = this.letterArr[i].check(guess)
+        if (tempSuccess) {
+            successGuess = tempSuccess
+        };
+        }
+        //feed back to the user about the guess
+        if(successGuess){
+            console.log("Correct!")
+        } else {
+            console.log("Incorrect!")
         }
     }
 

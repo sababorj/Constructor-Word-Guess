@@ -11,6 +11,7 @@ var Letter = function(a){
     this.check = function(guess){
         if(guess === this.value){
             this.isGuessed = true;
+            return true
         }
     }
 }
