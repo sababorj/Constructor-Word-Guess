@@ -22,7 +22,11 @@ var Word = function(word){
     }
 }
 
-var saba = new Word("minamo");
-console.log(saba.show());
-saba.check("i");
-console.log(saba.show());
+module.exports = Word;
+
+// var saba = new Word("minamo");
+// console.log(saba.show());
+// saba.check("i");
+// saba.check("m")
+// saba.check("o")
+// console.log(saba.show());
