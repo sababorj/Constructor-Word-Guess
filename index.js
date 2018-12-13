@@ -34,9 +34,7 @@ function game() {
         inquirer.prompt([{
             name: "word",
             message: "Guess a letter!",
-            validate: function(guess) {
-                return guess.length === 1;
-            }
+            validate: guess => guess.length === 1
         }]).then((res) => {
             guess.check(res.word)
             console.log(`${guess.show()}\n`);
